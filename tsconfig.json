@@ -1,0 +1,5 @@
+{
+  "extends": "@vic1707/tsconfig/base.json",
+  "include": ["src", ".eslintrc.js", "vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
