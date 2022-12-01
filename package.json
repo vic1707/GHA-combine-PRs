@@ -3,7 +3,7 @@
   "packageManager": "yarn@4.0.0-rc.28",
   "scripts": {
     "dev": "vite-node src/__dev.ts",
-    "build": "vite build",
+    "build": "ncc build src/index.ts -m -o dist && rm -rf dist/src dist/vite*",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,scss,css,json,yml}\" -c",
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
+    "@vercel/ncc": "^0.34.0",
     "@vic1707/eslint-config": "^1.0.9",
     "@vic1707/prettier": "^1.0.0",
     "@vic1707/tsconfig": "^1.0.0",

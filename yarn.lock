@@ -438,6 +438,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/ncc@npm:^0.34.0":
+  version: 0.34.0
+  resolution: "@vercel/ncc@npm:0.34.0"
+  dependencies:
+    node-gyp: "npm:latest"
+  bin:
+    ncc: dist/ncc/cli.js
+  checksum: ab03b528eb430cb58ebd664722c55293c5e9515c1f44412b64bdc804afacb98fad242e2cf2a5129c7e572dbaa0b457ec7e2734e0b1b505b0c83878ceed7c2cb9
+  languageName: node
+  linkType: hard
+
 "@vic1707/eslint-config@npm:^1.0.9":
   version: 1.0.9
   resolution: "@vic1707/eslint-config@npm:1.0.9"
@@ -488,6 +499,7 @@ __metadata:
     "@actions/core": "npm:^1.10.0"
     "@actions/github": "npm:^5.1.1"
     "@types/node": "npm:^18.11.9"
+    "@vercel/ncc": "npm:^0.34.0"
     "@vic1707/eslint-config": "npm:^1.0.9"
     "@vic1707/prettier": "npm:^1.0.0"
     "@vic1707/tsconfig": "npm:^1.0.0"
