@@ -1,0 +1,30 @@
+name: GHA-combine-PRs
+
+description: 'An action to combine PRs automatically'
+
+inputs:
+  github-token:
+    description: 'The GitHub token to use for the PRs'
+    required: true
+  combine-branch-name:
+    description: 'The branch name to use for the combined PR'
+    default: 'combine-PRs'
+  ignore-label:
+    description: 'Exclude PRs with this label'
+    default: 'nocombine'
+  must-be-green:
+    description: 'Only combine PRs that are green (status is success)'
+    default: true
+  always-recreate:
+    description: 'Always recreate the combine branch'
+    default: false
+  branch-prefix:
+    description: 'The prefix to use for the combined PR'
+    default: 'dependabot/'
+  survive-delete:
+    description: 'Survive the deletion of a valid PR'
+    default: false
+
+runs:
+  using: 'node16'
+  main: 'dist/index.umd.js'
