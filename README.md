@@ -6,14 +6,54 @@ The base is identical, I just added typescript support, removed the graphql requ
 
 ## Inputs
 
-|       Name        | Description                                                        |                          Default                           | Required |
-| :---------------: | ------------------------------------------------------------------ | :--------------------------------------------------------: | :------: |
-|  `github-token`   | GitHub token                                                       | is built-in, use `github-token: ${{secrets.GITHUB_TOKEN}}` |   `✅`   |
-|  `branch-prefix`  | Prefix of the branches to be combined                              |                       `dependabot/`                        |   `❌`   |
-| `combine-branch`  | Name of the branch to combine into                                 |                       `combine-PRs`                        |   `❌`   |
-|  `ignore-label`   | Label to ignore                                                    |                        `nocombine`                         |   `❌`   |
-|  `must-be-green`  | The branches that would be combine must be green (CI is validated) |                           `true`                           |   `❌`   |
-| `always-recreate` | Always recreate the combine branch (turns off the update feature)  |                          `false`                           |   `❌`   |
+|       Name        | Description                                                                       |                          Default                           | Required |
+| :---------------: | --------------------------------------------------------------------------------- | :--------------------------------------------------------: | :------: |
+|  `github-token`   | GitHub token                                                                      | is built-in, use `github-token: ${{secrets.GITHUB_TOKEN}}` |    ✅    |
+|  `branch-prefix`  | Prefix of the branches to be combined                                             |                       `dependabot/`                        |    ❌    |
+| `combine-branch`  | Name of the branch to combine into                                                |                       `combine-PRs`                        |    ❌    |
+|  `ignore-label`   | Label to ignore                                                                   |                        `nocombine`                         |    ❌    |
+|  `must-be-green`  | The branches that would be combine must be green (CI is validated)                |                           `true`                           |    ❌    |
+| `always-recreate` | Always recreate the combine branch (turns off the update feature)                 |                          `false`                           |    ❌    |
+| `survive-delete`  | The deletion of a ✅ PR will not trigger a rebuild from scratch of the combine PR |                          `false`                           |    ❌    |
+
+## Basic usage
+
+```yaml
+name: Combine PRs
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vic1707/GHA-combine-PRs@1.0.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+```
+
+or
+
+```yaml
+name: Combine PRs
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vic1707/GHA-combine-PRs@1.0.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          branch-prefix: dependabot/
+          combine-branch: combine-PRs
+          ignore-label: nocombine
+          must-be-green: true
+          always-recreate: false
+```
 
 ## What it does
 
@@ -21,6 +61,8 @@ This action will combine all the branches that match the `branch-prefix` into th
 
 If the `combine-branch` branch does not exist, it will be created as well as the PR.
 If the `combine-branch` branch exists, it will be updated and the PR will be updated with a new message except if the `always-recreate` is set to `true` in which case the branch will be deleted and recreated.
+
+The checkout action (`actions/checkout@v2`) isn't required by this action because everything takes place via API calls.
 
 ### Updates cases (only applies if `always-recreate` is set to `false`)
 
@@ -36,21 +78,21 @@ To describe the behavior of updates we will look at the PR message produced:
 
 [![PR_Message.png](img/PR_Message.png)](img/PR_Message.png)
 
-We can see that PR's are regrouped by their status (3 possible statuses: `✅`, `⚠️` or `❌`).
+We can see that PR's are regrouped by their status (3 possible statuses: ✅, ⚠️ or ❌).
 
 When you re-run the action, if a PR "goes up 1-2 statuses" in the status list, a new message will be added to the PR with the actualized status.
-For example, if a PR was `❌` and succeds the combine, it will be moved with the other successful combines and a new message will be added to the PR.
+For example, if a PR was ❌ and succeds the combine, it will be moved with the other successful combines and a new message will be added to the PR.
 
-If a PR goes from `⚠️` to `❌`, a new message will be added to the PR with the actualized status.
+If a PR goes from ⚠️ to ❌, a new message will be added to the PR with the actualized status.
 
-If a `✅` PR gets updated and is still green it will trigger a normal update.
+If a ✅ PR gets updated and is still green it will trigger a normal update.
 
 #### ⚠️⚠️⚠️ Scenarios that restarts the action from scratch (brand new branch and PR) ⚠️⚠️⚠️
 
-- Changes of any kind to a `✅` PR (PR closed, review dissmissed, branch deleted, etc...).
+- Changes of any kind to a ✅ PR (PR closed, review dissmissed, branch deleted, etc...).
 - Fail to parse the previous state on the first PR message.
 
-`survive-delete` is a boolean input that will prevent the action from restarting from scratch if a `✅` PR is deleted.
+`survive-delete` is a boolean input that will prevent the action from restarting from scratch if a ✅ PR is deleted.
 
 No matter what, the first message of the PR always represents the current state of the `combine-branch` branch.
 
@@ -58,6 +100,7 @@ No matter what, the first message of the PR always represents the current state 
 
 - [ ] Add inputs for `reviewers` and `team-reviewers` (the question is more about the format of the input, ex: comma/space separated, multiline, etc.).
 - [ ] Add unit tests by mocking Github API responses.
+- [ ] Combine PR is opened with a `draft` status, if someone needs it I will add an input for it.
 
 ## Notes
 
