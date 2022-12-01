@@ -27,7 +27,7 @@ inputs:
 
 runs:
   using: 'node16'
-  main: 'dist/index.umd.js'
+  main: 'dist/index.mjs'
 
 branding:
   icon: 'git-merge'
