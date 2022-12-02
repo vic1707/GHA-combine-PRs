@@ -20,9 +20,9 @@ export const buildBody = (saveState: SaveState): string => {
   if (failedBodies.length) PRbody += `⚠️ The following PRs failed due to conflicts:\n${failedBodies.join('\n')}\n\n`;
   if (invalidBodies.length) PRbody += `❌ The following PRs are not in a valid state:\n${invalidBodies.join('\n')}\n\n`;
 
-  PRbody += `<details><summary>PRs state (do not edit, it's used for future updates)</summary>\n${JSON.stringify(
+  PRbody += `<details><summary>PRs state (do not edit, it's used for future updates)</summary>\n\n\`\`\`json\n${JSON.stringify(
     saveState
-  )}\n</details>\n`;
+  )}\n\`\`\`\n</details>\n`;
 
   PRbody += `🚨 This was last updated on ${new Date().toLocaleString()}`;
   return PRbody;
@@ -47,8 +47,8 @@ export const buildUpdateMessage = (TBCsStates: SaveState): string =>
     .join('\n');
 
 export const parseBody = (body: string): SaveState | Error => {
-  // extract the text between '</summary>\n\n' and '\n\n</details>'
-  const state = body.match(/(?<=<\/summary>\n)(.*)(?=\n<\/details>)/);
+  // extract the text between '</summary>\n\n```json\n' and '\n```\n\n</details>'
+  const state = body.match(/(?<=<\/summary>\n\n```json\n)(.*)(?=\n```\n<\/details>)/);
   const res = state?.at(1);
   if (!res) return Error('Could not parse the body of the PR');
   return JSON.parse(res) as SaveState;
