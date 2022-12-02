@@ -19,7 +19,7 @@ The base is identical, I just added typescript support, removed the graphql requ
 ## Basic usage
 
 ```yaml
-name: Combine PRs
+name: "Combine PRs"
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -28,15 +28,17 @@ jobs:
   combine:
     runs-on: ubuntu-latest
     steps:
-      - uses: vic1707/GHA-combine-PRs@1.0.0
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+    -   
+      name: GHA-combine-PRs
+      uses: vic1707/GHA-combine-PRs@1.0.0
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
 ```
 
 or
 
 ```yaml
-name: Combine PRs
+name: "Combine PRs"
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -45,14 +47,16 @@ jobs:
   combine:
     runs-on: ubuntu-latest
     steps:
-      - uses: vic1707/GHA-combine-PRs@1.0.0
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          branch-prefix: dependabot/
-          combine-branch: combine-PRs
-          ignore-label: nocombine
-          must-be-green: true
-          always-recreate: false
+    -   
+      name: GHA-combine-PRs
+      uses: vic1707/GHA-combine-PRs@1.0.0
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        branch-prefix: dependabot/
+        combine-branch: combine-PRs
+        ignore-label: nocombine
+        must-be-green: true
+        always-recreate: false
 ```
 
 ## What it does
