@@ -1,6 +1,6 @@
 {
   "name": "GHA-combine-dependabot-PRs",
-  "packageManager": "yarn@4.0.0-rc.28",
+  "packageManager": "yarn@4.0.0-rc.32",
   "scripts": {
     "dev": "vite-node src/__dev.ts",
     "build": "ncc build src/index.ts -m -o dist && rm -rf dist/src dist/vite*",
@@ -11,25 +11,25 @@
     "upgrade-packages": "yarn upgrade-interactive"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "@vercel/ncc": "^0.34.0",
-    "@vic1707/eslint-config": "^1.0.9",
+    "@types/node": "^18.11.13",
+    "@vercel/ncc": "^0.36.0",
+    "@vic1707/eslint-config": "^1.0.11",
     "@vic1707/prettier": "^1.0.0",
     "@vic1707/tsconfig": "^1.0.0",
     "dotenv": "^16.0.3",
-    "eslint": "^8.28.0",
-    "prettier": "^2.8.0",
-    "typescript": "^4.9.3",
-    "vite": "^3.2.4",
-    "vite-node": "^0.25.3"
+    "eslint": "^8.29.0",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.0",
+    "vite-node": "^0.25.7"
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1"
   },
   "engines": {
-    "node": ">=19",
-    "npm": ">=9",
+    "node": ">=19.2.0",
+    "npm": ">=9.2.0",
     "yarn": ">=4"
   },
   "prettier": "@vic1707/prettier"
