@@ -33,11 +33,10 @@ export interface MergeableState {
   mergeable_state: string;
 }
 
-export type PRInfos = BranchInfos &
-  MergeableState & {
-    pull_number: number;
-    title: string;
-  };
+export interface PRInfos extends BranchInfos, MergeableState {
+  pull_number: number;
+  title: string;
+}
 
 export type TBCsStatus = 'invalid' | 'merge-conflict' | 'success';
 
