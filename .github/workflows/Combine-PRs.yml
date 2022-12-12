@@ -1,0 +1,17 @@
+name: 'Combine PRs'
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  combine-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: GHA-combine-PRs
+        uses: ./
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          must-be-green: false ## need to be changed
