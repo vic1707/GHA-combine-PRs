@@ -46,7 +46,8 @@ export const run = async (s: Setup): Promise<void> => {
   const stateToNotify = removeKnownState({ ...invalidTBCs, ...currState }, combinePRInfos?.state ?? {});
 
   // should be `setNeutral` when it will be available
-  if (!Object.keys(stateToNotify).length) return setFailed('No new PRs to notify.');
+  if (!Object.values(stateToNotify).some(({ status }) => status === 'success'))
+    return setFailed('No new PRs to notify.');
 
   LOGGER.section('NOTIFYING COMBINE PR');
   await manageCombinePR(mainInfos, combinePRInfos, stateToNotify, s);
