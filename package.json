@@ -13,7 +13,7 @@
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@vercel/ncc": "^0.36.1",
-    "@vic1707/eslint-config": "^2.1.0",
+    "@vic1707/eslint-config": "^2.1.1",
     "@vic1707/prettier": "^1.1.0",
     "@vic1707/tsconfig": "^2.0.1",
     "dotenv": "^16.0.3",
