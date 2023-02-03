@@ -4,6 +4,8 @@ First I wan't to give credit to [hrvey's combine prs workflow](https://github.co
 
 The base is identical, I just added typescript support, removed the graphql request (because it's not typesafe) and added a few more features such as incremental updates.
 
+⚠️ Be aware: actions can't trigger other actions. So the Combine PR created by this action can't trigger your other workflows ⚠️
+
 ## Inputs
 
 |         Name          | Description                                                                       |                          Default                           | Required |
