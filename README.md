@@ -6,15 +6,15 @@ The base is identical, I just added typescript support, removed the graphql requ
 
 ## Inputs
 
-|       Name        | Description                                                                       |                          Default                           | Required |
-| :---------------: | --------------------------------------------------------------------------------- | :--------------------------------------------------------: | :------: |
-|  `github-token`   | GitHub token                                                                      | is built-in, use `github-token: ${{secrets.GITHUB_TOKEN}}` |    ✅    |
-|  `branch-prefix`  | Prefix of the branches to be combined                                             |                       `dependabot/`                        |    ❌    |
-| `combine-branch`  | Name of the branch to combine into                                                |                       `combine-PRs`                        |    ❌    |
-|  `ignore-label`   | Label to ignore                                                                   |                        `nocombine`                         |    ❌    |
-|  `must-be-green`  | The branches that would be combine must be green (CI is validated)                |                           `true`                           |    ❌    |
-| `always-recreate` | Always recreate the combine branch (turns off the update feature)                 |                          `false`                           |    ❌    |
-| `survive-delete`  | The deletion of a ✅ PR will not trigger a rebuild from scratch of the combine PR |                          `false`                           |    ❌    |
+|         Name          | Description                                                                       |                          Default                           | Required |
+| :-------------------: | --------------------------------------------------------------------------------- | :--------------------------------------------------------: | :------: |
+|    `github-token`     | GitHub token                                                                      | is built-in, use `github-token: ${{secrets.GITHUB_TOKEN}}` |    ✅    |
+|    `branch-prefix`    | Prefix of the branches to be combined                                             |                       `dependabot/`                        |    ❌    |
+| `combine-branch-name` | Name of the branch to combine into                                                |                       `combine-PRs`                        |    ❌    |
+|    `ignore-label`     | Label to ignore                                                                   |                        `nocombine`                         |    ❌    |
+|    `must-be-green`    | The branches that would be combine must be green (CI is validated)                |                           `true`                           |    ❌    |
+|   `always-recreate`   | Always recreate the combine branch (turns off the update feature)                 |                          `false`                           |    ❌    |
+|   `survive-delete`    | The deletion of a ✅ PR will not trigger a rebuild from scratch of the combine PR |                          `false`                           |    ❌    |
 
 ## Basic usage
 
@@ -51,7 +51,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           branch-prefix: dependabot/
-          combine-branch: combine-PRs
+          combine-branch-name: combine-PRs
           ignore-label: nocombine
           must-be-green: true
           always-recreate: false
