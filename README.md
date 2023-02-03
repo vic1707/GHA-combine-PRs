@@ -59,16 +59,16 @@ jobs:
 
 ## What it does
 
-This action will combine all the branches that match the `branch-prefix` into the `combine-branch` branch.
+This action will combine all the branches that match the `branch-prefix` into the `combine-branch-name` branch.
 
-If the `combine-branch` branch does not exist, it will be created as well as the PR.
-If the `combine-branch` branch exists, it will be updated and the PR will be updated with a new message except if the `always-recreate` is set to `true` in which case the branch will be deleted and recreated.
+If the `combine-branch-name` branch does not exist, it will be created as well as the PR.
+If the `combine-branch-name` branch exists, it will be updated and the PR will be updated with a new message except if the `always-recreate` is set to `true` in which case the branch will be deleted and recreated.
 
 The checkout action (`actions/checkout@v2`) isn't required by this action because everything takes place via API calls.
 
 ### Updates cases (only applies if `always-recreate` is set to `false`)
 
-After an update, the first PR message will always show the current state of the `combine-branch` branch.
+After an update, the first PR message will always show the current state of the `combine-branch-name` branch.
 
 If a previously `status: blocked` (from faild tests or no review) branch is now green, it will be combined and a new message will be added to the PR.
 
@@ -96,7 +96,7 @@ If a ✅ PR gets updated and is still green it will trigger a normal update.
 
 `survive-delete` is a boolean input that will prevent the action from restarting from scratch if a ✅ PR is deleted.
 
-No matter what, the first message of the PR always represents the current state of the `combine-branch` branch.
+No matter what, the first message of the PR always represents the current state of the `combine-branch-name` branch.
 
 ## Improvements
 
