@@ -1,4 +1,4 @@
-name: Check formatting
+name: Check linter
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  prettier:
+  eslint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
