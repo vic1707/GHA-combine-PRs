@@ -16,6 +16,7 @@ export const parseInput = (): Setup => ({
   settings: {
     BRANCH_PREFIX: process.env.BRANCH_PREFIX || 'dependabot/',
     COMBINE_BRANCH_NAME: process.env.COMBINE_BRANCH_NAME || 'combine-PRs',
+    DRAFT: dotEnvParseBoolean(process.env.DRAFT || 'false'),
     filters: {
       'always-recreate': dotEnvParseBoolean(process.env.filter_always_recreate || 'false'),
       'ignore-label': process.env.filter_ignore_label || 'nocombine',

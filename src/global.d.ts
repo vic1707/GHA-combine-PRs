@@ -13,6 +13,7 @@ export declare global {
     interface ProcessEnv {
       BRANCH_PREFIX: string;
       COMBINE_BRANCH_NAME: string;
+      DRAFT: string; // technically a boolean but dotenv parses it as a string
       TOKEN: string;
       filter_always_recreate: string; // technically a boolean but dotenv parses it as a string
       filter_ignore_label: string;
