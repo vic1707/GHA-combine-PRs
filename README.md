@@ -8,15 +8,16 @@ The base is identical, I just added typescript support, removed the graphql requ
 
 ## Inputs
 
-|         Name          | Description                                                                       |                          Default                           | Required |
-| :-------------------: | --------------------------------------------------------------------------------- | :--------------------------------------------------------: | :------: |
-|    `github-token`     | GitHub token                                                                      | is built-in, use `github-token: ${{secrets.GITHUB_TOKEN}}` |    ✅    |
-|    `branch-prefix`    | Prefix of the branches to be combined                                             |                       `dependabot/`                        |    ❌    |
-| `combine-branch-name` | Name of the branch to combine into                                                |                       `combine-PRs`                        |    ❌    |
-|    `ignore-label`     | Label to ignore                                                                   |                        `nocombine`                         |    ❌    |
-|    `must-be-green`    | The branches that would be combine must be green (CI is validated)                |                           `true`                           |    ❌    |
-|   `always-recreate`   | Always recreate the combine branch (turns off the update feature)                 |                          `false`                           |    ❌    |
-|   `survive-delete`    | The deletion of a ✅ PR will not trigger a rebuild from scratch of the combine PR |                          `false`                           |    ❌    |
+|         Name          | Description                                                                                                                                                                                                                                                                           |                          Default                           | Required |
+| :-------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------: | :------: |
+|    `github-token`     | GitHub token                                                                                                                                                                                                                                                                          | is built-in, use `github-token: ${{secrets.GITHUB_TOKEN}}` |    ✅    |
+|    `branch-prefix`    | Prefix of the branches to be combined                                                                                                                                                                                                                                                 |                       `dependabot/`                        |    ❌    |
+| `combine-branch-name` | Name of the branch to combine into                                                                                                                                                                                                                                                    |                       `combine-PRs`                        |    ❌    |
+|    `ignore-label`     | Label to ignore                                                                                                                                                                                                                                                                       |                        `nocombine`                         |    ❌    |
+|    `must-be-green`    | The branches that would be combine must be green (CI is validated)                                                                                                                                                                                                                    |                           `true`                           |    ❌    |
+|   `always-recreate`   | Always recreate the combine branch (turns off the update feature)                                                                                                                                                                                                                     |                          `false`                           |    ❌    |
+|   `survive-delete`    | The deletion of a ✅ PR will not trigger a rebuild from scratch of the combine PR                                                                                                                                                                                                     |                          `false`                           |    ❌    |
+|        `draft`        | The combine PR will be created as a draft (be aware of [Github's draft PRs limitations](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests) in case it doesn't work) |                          `false`                           |    ❌    |
 
 ## Basic usage
 
@@ -31,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: GHA-combine-PRs
-        uses: vic1707/GHA-combine-PRs@1.0.0
+        uses: vic1707/GHA-combine-PRs@1.2.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
 ```
@@ -49,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: GHA-combine-PRs
-        uses: vic1707/GHA-combine-PRs@1.0.0
+        uses: vic1707/GHA-combine-PRs@1.2.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           branch-prefix: dependabot/
@@ -57,6 +58,7 @@ jobs:
           ignore-label: nocombine
           must-be-green: true
           always-recreate: false
+          draft: false
 ```
 
 ## What it does

@@ -8,6 +8,7 @@ export const parseInput = (): Setup => {
   const TOKEN = getInput('github-token', { required: true });
   const COMBINE_BRANCH_NAME = getInput('combine-branch-name', { required: false, trimWhitespace: true });
   const BRANCH_PREFIX = getInput('branch-prefix', { required: false, trimWhitespace: true });
+  const DRAFT = getBooleanInput('draft', { required: false, trimWhitespace: true });
 
   /* Filters */
   const filters: Filters = {
@@ -19,5 +20,5 @@ export const parseInput = (): Setup => {
 
   /* Octokit */
   const github = getOctokit(TOKEN).rest;
-  return { github, ...context.repo, settings: { BRANCH_PREFIX, COMBINE_BRANCH_NAME, filters } };
+  return { github, ...context.repo, settings: { BRANCH_PREFIX, COMBINE_BRANCH_NAME, DRAFT, filters } };
 };

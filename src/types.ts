@@ -13,6 +13,7 @@ export interface Filters {
 interface Settings {
   BRANCH_PREFIX: string;
   COMBINE_BRANCH_NAME: string;
+  DRAFT: boolean;
   filters: Filters;
 }
 

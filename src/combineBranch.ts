@@ -25,7 +25,7 @@ export const manageCombinePR = async (
   { branchName: base }: BranchInfos,
   combinePRInfos: CombinePRInfos | null,
   currState: SaveState,
-  { settings: { BRANCH_PREFIX, COMBINE_BRANCH_NAME }, github, owner, repo }: Setup
+  { settings: { BRANCH_PREFIX, COMBINE_BRANCH_NAME, DRAFT }, github, owner, repo }: Setup
 ): Promise<void> => {
   if (!combinePRInfos) {
     // create the combine PR
@@ -34,6 +34,7 @@ export const manageCombinePR = async (
     } = await github.pulls.create({
       base,
       body: buildBody(currState),
+      draft: DRAFT,
       head: COMBINE_BRANCH_NAME,
       owner,
       repo,
