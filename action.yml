@@ -24,6 +24,9 @@ inputs:
   survive-delete:
     description: 'Survive the deletion of a valid PR'
     default: false
+  draft:
+    description: 'Create the combined PR as a draft'
+    default: false
 
 runs:
   using: 'node16'
