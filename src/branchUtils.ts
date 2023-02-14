@@ -7,7 +7,7 @@ export const getMergeableState = async (
   pull_number: number
 ): Promise<MergeableState> => {
   const {
-    data: { mergeable_state, mergeable }
+    data: { mergeable, mergeable_state }
   } = await github.pulls.get({
     owner,
     pull_number,

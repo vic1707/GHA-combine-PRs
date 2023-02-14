@@ -4,7 +4,7 @@ import type { BranchInfos, CombinePRInfos, SaveState, Setup } from './types';
 
 export const createCombineBranch = async (
   { branchName: head, sha: mainSHA }: BranchInfos,
-  { settings: { COMBINE_BRANCH_NAME }, github, owner, repo }: Setup
+  { github, owner, repo, settings: { COMBINE_BRANCH_NAME } }: Setup
 ): Promise<void> => {
   // get all branches and check if the combine branch exists
   const { data: branchesData } = await github.repos.listBranches({ owner, repo });
@@ -25,7 +25,7 @@ export const manageCombinePR = async (
   { branchName: base }: BranchInfos,
   combinePRInfos: CombinePRInfos | null,
   currState: SaveState,
-  { settings: { BRANCH_PREFIX, COMBINE_BRANCH_NAME, DRAFT }, github, owner, repo }: Setup
+  { github, owner, repo, settings: { BRANCH_PREFIX, COMBINE_BRANCH_NAME, DRAFT } }: Setup
 ): Promise<void> => {
   if (!combinePRInfos) {
     // create the combine PR
