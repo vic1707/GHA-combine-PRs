@@ -39,7 +39,7 @@ export const buildUpdateMessage = (TBCsStates: SaveState): string =>
       if (statusB === 'merge-conflict') return 1;
       return 0;
     })
-    .map(([pull_number, { title, status }]) => {
+    .map(([pull_number, { status, title }]) => {
       if (status === 'success') return `✅ #${pull_number} - ${title} - was just merged`;
       if (status === 'merge-conflict') return `⚠️ #${pull_number} - ${title} - has conflicts`;
       return `❌ #${pull_number} - ${title} - is not in a valid state`;
