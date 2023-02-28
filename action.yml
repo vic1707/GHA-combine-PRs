@@ -27,6 +27,9 @@ inputs:
   draft:
     description: 'Create the combined PR as a draft'
     default: false
+  min-prs:
+    description: 'The minimum number of PRs to combine'
+    default: 2
 
 runs:
   using: 'node16'

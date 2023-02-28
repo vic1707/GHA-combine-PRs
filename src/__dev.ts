@@ -20,6 +20,7 @@ export const parseInput = (): Setup => ({
     filters: {
       'always-recreate': dotEnvParseBoolean(process.env.filter_always_recreate || 'false'),
       'ignore-label': process.env.filter_ignore_label || 'nocombine',
+      'min-prs': parseInt(process.env.MIN_PRS || '2', 10),
       'must-be-green': dotEnvParseBoolean(process.env.filter_must_be_green || 'true'),
       'survive-delete': dotEnvParseBoolean(process.env.filter_survive_delete || 'false')
     }

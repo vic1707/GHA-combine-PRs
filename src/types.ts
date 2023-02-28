@@ -6,6 +6,7 @@ export type RestResponsePRs = RestEndpointMethodTypes['pulls']['list']['response
 export interface Filters {
   'always-recreate': boolean;
   'ignore-label': string;
+  'min-prs': number;
   'must-be-green': boolean;
   'survive-delete': boolean;
 }

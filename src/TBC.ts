@@ -3,17 +3,17 @@ import { LOGGER } from './Logger';
 import type { PRInfos, RestResponsePRs, SaveState, Setup } from './types';
 
 export const parseTBCs = async ({
-  settings: { BRANCH_PREFIX, filters },
   github,
   owner,
-  repo
+  repo,
+  settings: { BRANCH_PREFIX, filters }
 }: Setup): Promise<PRInfos[]> => {
   /* Get the list of PRs */
   const { data: pullsData } = await github.pulls.list({ owner, repo, state: 'open' });
 
   /* Filter PRs that aren't doesn't matcch the prefix and aren't drafted */
   let potentialsTBCs = pullsData
-    .filter(({ head: { ref: branchName }, draft }) => !draft && branchName.startsWith(BRANCH_PREFIX))
+    .filter(({ draft, head: { ref: branchName } }) => !draft && branchName.startsWith(BRANCH_PREFIX))
     .sort((a, b) => a.number - b.number);
 
   /* Filter TBCs with the ignore label */
@@ -27,7 +27,7 @@ const addMergeableState = async (
   { github, owner, repo }: KeyedOmit<Setup, 'settings'>
 ): Promise<PRInfos[]> =>
   await Promise.all(
-    TBCs.map(async ({ head: { ref: branchName }, title, number: pull_number, base: { sha } }) => ({
+    TBCs.map(async ({ base: { sha }, head: { ref: branchName }, number: pull_number, title }) => ({
       branchName,
       pull_number,
       sha,
@@ -38,7 +38,7 @@ const addMergeableState = async (
 
 const filterByLabel =
   (label: string) =>
-  ({ labels, title, number }: RestResponsePRs[number]): boolean => {
+  ({ labels, number, title }: RestResponsePRs[number]): boolean => {
     const ignored = !labels.some(({ name }) => name === label);
     if (!ignored) LOGGER.TBCIgnored(number, title, `LABEL: ${label}`);
     return ignored;
@@ -50,7 +50,7 @@ export const breakingChanges = (TBCs: PRInfos[], previousState: SaveState, { set
   // therefore we need to set the `always-recreate` filter to true
   Object.entries(previousState)
     .filter(([_, { status }]) => status === 'success')
-    .some(([key, { title, mergeable, mergeable_state, sha }]) => {
+    .some(([key, { mergeable, mergeable_state, sha, title }]) => {
       const el = TBCs.find(({ pull_number }) => pull_number === /* is a string because parsing */ +key);
       if (!el && !filters['survive-delete']) {
         filters['always-recreate'] = true;
@@ -65,7 +65,7 @@ export const breakingChanges = (TBCs: PRInfos[], previousState: SaveState, { set
     });
 
 export const filterTBCs = (TBCs: PRInfos[], previousState: SaveState): PRInfos[] =>
-  TBCs.filter(({ sha, mergeable, mergeable_state, pull_number, title }) => {
+  TBCs.filter(({ mergeable, mergeable_state, pull_number, sha, title }) => {
     const hasChanged =
       previousState[pull_number]?.sha !== sha ||
       previousState[pull_number]?.mergeable_state !== mergeable_state ||
@@ -103,7 +103,7 @@ export const separateValidInvalidTBCs = (
 
 export const mergeTBCs = async (
   TBCsToCombine: PRInfos[],
-  { settings: { COMBINE_BRANCH_NAME }, github, owner, repo }: Setup
+  { github, owner, repo, settings: { COMBINE_BRANCH_NAME } }: Setup
 ): Promise<SaveState> => {
   const res: SaveState = {};
   for (const TBC of TBCsToCombine) {

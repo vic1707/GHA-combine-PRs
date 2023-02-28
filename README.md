@@ -18,6 +18,7 @@ The base is identical, I just added typescript support, removed the graphql requ
 |   `always-recreate`   | Always recreate the combine branch (turns off the update feature)                                                                                                                                                                                                                     |                          `false`                           |    ❌    |
 |   `survive-delete`    | The deletion of a ✅ PR will not trigger a rebuild from scratch of the combine PR                                                                                                                                                                                                     |                          `false`                           |    ❌    |
 |        `draft`        | The combine PR will be created as a draft (be aware of [Github's draft PRs limitations](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests) in case it doesn't work) |                          `false`                           |    ❌    |
+|       `min-prs`       | The minimum number of PRs to combine before creating the combine PR (checked with `<=`; so two candidates are enough to trigger the combine with default settings)                                                                                                                    |                            `2`                             |    ❌    |
 
 ## Basic usage
 
@@ -59,6 +60,7 @@ jobs:
           must-be-green: true
           always-recreate: false
           draft: false
+          min-prs: 4
 ```
 
 ## What it does
