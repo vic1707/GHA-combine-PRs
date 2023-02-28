@@ -14,6 +14,7 @@ export const parseInput = (): Setup => {
   const filters: Filters = {
     'always-recreate': getBooleanInput('always-recreate', { required: false, trimWhitespace: true }),
     'ignore-label': getInput('ignore-label', { required: false, trimWhitespace: true }),
+    'min-prs': parseInt(getInput('min-prs', { required: false, trimWhitespace: true }), 10) || 2, // Default to 2 if not set or not a number
     'must-be-green': getBooleanInput('must-be-green', { required: false, trimWhitespace: true }),
     'survive-delete': getBooleanInput('survive-delete', { required: false, trimWhitespace: true })
   };
