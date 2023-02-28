@@ -732,7 +732,7 @@ __metadata:
     prettier: "npm:^2.8.4"
     typescript: "npm:^4.9.5"
     vite: "npm:^4.1.1"
-    vite-node: "npm:^0.28.5"
+    vite-node: "npm:^0.29.2"
   languageName: unknown
   linkType: soft
 
@@ -972,13 +972,6 @@ __metadata:
   dependencies:
     fill-range: "npm:^7.0.1"
   checksum: 1aa7f7f39e1dff23894196303515503dd945f36adcb78073ee067b421ecc595265556911183b24d1bc4e51011d3536d63d117cb4493e5123fcc7456596a93637
-  languageName: node
-  linkType: hard
-
-"buffer-from@npm:^1.0.0":
-  version: 1.1.2
-  resolution: "buffer-from@npm:1.1.2"
-  checksum: 2d8a264381325ee41959bb21bae76dc85b486f253e227a3fa70082c83f14c41665ce227ccda79e93ea2fc12e37a678fe956a6fa01b1876e6142eaf6554585ea4
   languageName: node
   linkType: hard
 
@@ -3464,23 +3457,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.21":
-  version: 0.5.21
-  resolution: "source-map-support@npm:0.5.21"
-  dependencies:
-    buffer-from: "npm:^1.0.0"
-    source-map: "npm:^0.6.0"
-  checksum: ab0f9bfbcfc32018966a7199de5aeafee03a38408852400962d302392aab16d670dc84e6eda937570c5ff09972ae23347804cdffc5fe3c5e382a5b04cee3d580
-  languageName: node
-  linkType: hard
-
-"source-map@npm:^0.6.0, source-map@npm:^0.6.1":
-  version: 0.6.1
-  resolution: "source-map@npm:0.6.1"
-  checksum: cba9f44c3a4a0485f44a7760ebe427eecdd3b58011ae0459c05506b54f898835b2302073d6afa563a19b60ee9e54c82e33bc4a032e28bebacdfc635f1d0bf7e0
-  languageName: node
-  linkType: hard
-
 "ssri@npm:^9.0.0":
   version: 9.0.1
   resolution: "ssri@npm:9.0.1"
@@ -3813,21 +3789,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-node@npm:^0.28.5":
-  version: 0.28.5
-  resolution: "vite-node@npm:0.28.5"
+"vite-node@npm:^0.29.2":
+  version: 0.29.2
+  resolution: "vite-node@npm:0.29.2"
   dependencies:
     cac: "npm:^6.7.14"
     debug: "npm:^4.3.4"
     mlly: "npm:^1.1.0"
     pathe: "npm:^1.1.0"
     picocolors: "npm:^1.0.0"
-    source-map: "npm:^0.6.1"
-    source-map-support: "npm:^0.5.21"
     vite: "npm:^3.0.0 || ^4.0.0"
   bin:
     vite-node: vite-node.mjs
-  checksum: fd5d906c15fdc5877155bd542a6b5d028a863542486b4704bb77c67f90f40ef38813fb7391a0de10e0cbf5bf5084c3994f9abad5f3ff4ab1f20d134794c8c74c
+  checksum: 4e72d922ecb37f8be3ac0171517d912309dc735b579aed009cb3a1749e83dd9468686a251151c0022fb051dcb5696b4a9ffa2c0821f4a1613b3b316558bb54f9
   languageName: node
   linkType: hard
 
