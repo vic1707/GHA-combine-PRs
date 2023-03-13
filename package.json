@@ -17,7 +17,7 @@
     "@vic1707/prettier": "^1.1.1",
     "@vic1707/tsconfig": "^2.0.1",
     "dotenv": "^16.0.3",
-    "eslint": "^8.35.0",
+    "eslint": "^8.36.0",
     "prettier": "^2.8.4",
     "typescript": "^4.9.5",
     "vite-node": "^0.29.2"
