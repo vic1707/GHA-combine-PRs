@@ -11,21 +11,21 @@
     "upgrade-packages": "yarn upgrade-interactive"
   },
   "devDependencies": {
-    "@types/node": "^18.14.2",
+    "@types/node": "^18.15.5",
     "@vercel/ncc": "^0.36.1",
-    "@vic1707/eslint-config": "^4.0.0",
+    "@vic1707/eslint-config": "^4.0.2",
     "@vic1707/prettier": "^1.1.1",
-    "@vic1707/tsconfig": "^2.0.1",
+    "@vic1707/tsconfig": "^3.0.0",
     "dotenv": "^16.0.3",
-    "eslint": "^8.35.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.5",
-    "vite-node": "^0.29.2"
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.6",
+    "typescript": "^5.0.2",
+    "vite-node": "^0.29.7"
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
-    "vite": "^4.1.4"
+    "vite": "^4.2.1"
   },
   "engines": {
     "node": ">=19.2.0",
