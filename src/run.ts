@@ -37,7 +37,7 @@ export const run = async (s: Setup): Promise<void> => {
 
   // should be `setNeutral` when it will be available
   if (!validTBCs.length) return setFailed('No valid PRs found. Please check your filters and try again.');
-  if (validTBCs.length <= s.settings.filters['min-prs'])
+  if (!combinePRInfos && validTBCs.length <= s.settings.filters['min-prs'])
     return setFailed(`Not enough valid PRs found, found ${validTBCs.length}.`);
 
   await createCombineBranch(mainInfos, s);
