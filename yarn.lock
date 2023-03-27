@@ -640,10 +640,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.15.7":
-  version: 18.15.7
-  resolution: "@types/node@npm:18.15.7"
-  checksum: 521cebfb0a7115590beee0864f5a7856bd460f499ad9d77de96fc70d3de50a11e16a64e5e9a78c0191020b96454fd41a891afd4bcc90a27cbcde5765526d64ea
+"@types/node@npm:^18.15.10":
+  version: 18.15.10
+  resolution: "@types/node@npm:18.15.10"
+  checksum: 7ff3edc6148a703debc568f512899246dded5c41c9d2c495fcac01d7dead1771661098891eda75e9f5bb12df8ed6b9b7a7d814606ac1a0e2e00682ef64d2beca
   languageName: node
   linkType: hard
 
@@ -849,15 +849,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vic1707/eslint-config@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "@vic1707/eslint-config@npm:4.0.2"
+"@vic1707/eslint-config@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "@vic1707/eslint-config@npm:4.0.3"
   dependencies:
     "@darraghor/eslint-plugin-nestjs-typed": "npm:^3.19.0"
     "@typescript-eslint/eslint-plugin": "npm:^5.56.0"
     "@typescript-eslint/parser": "npm:^5.56.0"
     eslint-config-prettier: "npm:^8.8.0"
-    eslint-plugin-astro: "npm:^0.26.0"
+    eslint-plugin-astro: "npm:^0.26.1"
     eslint-plugin-import: "npm:^2.27.5"
     eslint-plugin-jest: "npm:^27.2.1"
     eslint-plugin-prettier: "npm:^4.2.1"
@@ -867,7 +867,7 @@ __metadata:
     eslint-plugin-solid: "npm:^0.11.0"
     eslint-plugin-sort-destructure-keys: "npm:^1.5.0"
     eslint-plugin-unused-imports: "npm:^2.0.0"
-    eslint-plugin-vitest: "npm:^0.0.54"
+    eslint-plugin-vitest: "npm:^0.0.57"
   peerDependencies:
     class-validator: "*"
     eslint: "*"
@@ -876,7 +876,7 @@ __metadata:
   peerDependenciesMeta:
     class-validator:
       optional: true
-  checksum: c3739e5fcf00a1dbf596a70e96acd238ca7435dad52bf51939a116b1f42167a45214085e40b7cf4901b02f83df22a4215566d04cd80104b8344d254d6fa25d72
+  checksum: ea0e288ce8bb6182d24d9f3eaac3940336fe13ea8d27573bbd7e8d839327b9599d6f0c11df0856acffe27173b159b422ccd525b2ef033d61f26c2f22e0ac24ea
   languageName: node
   linkType: hard
 
@@ -904,9 +904,9 @@ __metadata:
   dependencies:
     "@actions/core": "npm:^1.10.0"
     "@actions/github": "npm:^5.1.1"
-    "@types/node": "npm:^18.15.7"
+    "@types/node": "npm:^18.15.10"
     "@vercel/ncc": "npm:^0.36.1"
-    "@vic1707/eslint-config": "npm:^4.0.2"
+    "@vic1707/eslint-config": "npm:^4.0.3"
     "@vic1707/prettier": "npm:^1.1.1"
     "@vic1707/tsconfig": "npm:^3.0.0"
     dotenv: "npm:^16.0.3"
@@ -1082,9 +1082,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-eslint-parser@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "astro-eslint-parser@npm:0.13.0"
+"astro-eslint-parser@npm:^0.13.1":
+  version: 0.13.2
+  resolution: "astro-eslint-parser@npm:0.13.2"
   dependencies:
     "@astrojs/compiler": "npm:^1.0.0"
     "@typescript-eslint/scope-manager": "npm:^5.48.2"
@@ -1094,7 +1094,7 @@ __metadata:
     eslint-visitor-keys: "npm:^3.0.0"
     espree: "npm:^9.0.0"
     semver: "npm:^7.3.8"
-  checksum: 05efd4f4d456aacab80b5a7230486b503e684984f431afa0a1eca1a7147e328062a3ca242a458a045122a17858ce1be98e8421a859cc886d1951465d9528202b
+  checksum: 360b38596108dffb0e5a14ce01b6e0ebcce7f88bcf473118161556420e1ac447f51720c857b448660c19d8e383ce01663a9f892027623c4b67c7f752645d0d26
   languageName: node
   linkType: hard
 
@@ -1688,19 +1688,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-astro@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "eslint-plugin-astro@npm:0.26.0"
+"eslint-plugin-astro@npm:^0.26.1":
+  version: 0.26.1
+  resolution: "eslint-plugin-astro@npm:0.26.1"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
     "@typescript-eslint/types": "npm:^5.25.0"
-    astro-eslint-parser: "npm:^0.13.0"
+    astro-eslint-parser: "npm:^0.13.1"
     postcss: "npm:^8.4.14"
     postcss-selector-parser: "npm:^6.0.10"
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: 8ca37518e9ab720371e55679ed8473f90ae1222fea015e8cb899f3fea5ab78a47ca316bd9d83a0153ac5f9adb1d9291ce0eee48fea02a2d5bfb423fa18e35367
+  checksum: bfbd5227631ae0672dd43a17f06c48d64fe8113c9871f4d1900bc27643e071dfdc1465edb903875f9fd334f50dad1e71363ed0b5acfc8281204db0f499a56681
   languageName: node
   linkType: hard
 
@@ -1846,14 +1846,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:^0.0.54":
-  version: 0.0.54
-  resolution: "eslint-plugin-vitest@npm:0.0.54"
+"eslint-plugin-vitest@npm:^0.0.57":
+  version: 0.0.57
+  resolution: "eslint-plugin-vitest@npm:0.0.57"
   dependencies:
     "@typescript-eslint/utils": "npm:^5.53.0"
   peerDependencies:
     eslint: ">=8.0.0"
-  checksum: bf5d6090d5a458cafbd0fd726c27f7c24bdd3511de8a5e21fb4b66808fd9b677a2d7bdfcc63642b7c5785b481bcf2883d53ed574e39aca3b57c76ed499eef6af
+  checksum: 9803b322125ac3d6ef8d6f5f504cf1cdefb928fed14a33c1c4f99ce079e82e233a91554108b9485a6423ecf0db5a3c9f531e78871bfb885dd2f6cd7ff19b3ef3
   languageName: node
   linkType: hard
 
