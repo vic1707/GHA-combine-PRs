@@ -11,14 +11,14 @@
     "upgrade-packages": "yarn upgrade-interactive"
   },
   "devDependencies": {
-    "@types/node": "^18.15.5",
+    "@types/node": "^18.15.10",
     "@vercel/ncc": "^0.36.1",
-    "@vic1707/eslint-config": "^4.0.2",
+    "@vic1707/eslint-config": "^4.0.3",
     "@vic1707/prettier": "^1.1.1",
     "@vic1707/tsconfig": "^3.0.0",
     "dotenv": "^16.0.3",
     "eslint": "^8.36.0",
-    "prettier": "^2.8.6",
+    "prettier": "^2.8.7",
     "typescript": "^5.0.2",
     "vite-node": "^0.29.7"
   },
