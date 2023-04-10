@@ -914,7 +914,7 @@ __metadata:
     prettier: "npm:^2.8.7"
     typescript: "npm:^5.0.3"
     vite: "npm:^4.2.1"
-    vite-node: "npm:^0.29.8"
+    vite-node: "npm:^0.30.0"
   languageName: unknown
   linkType: soft
 
@@ -3039,7 +3039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mlly@npm:^1.1.0, mlly@npm:^1.1.1":
+"mlly@npm:^1.1.1":
   version: 1.1.1
   resolution: "mlly@npm:1.1.1"
   dependencies:
@@ -3048,6 +3048,18 @@ __metadata:
     pkg-types: "npm:^1.0.1"
     ufo: "npm:^1.1.0"
   checksum: 4ebffcf61a8381de0693ebaf741e11a353d5804774a45237328d4c88b42fc455b3d8d799e9f10b0420d4cf1435cae496b6f43f58b7188b502550666a52cffacc
+  languageName: node
+  linkType: hard
+
+"mlly@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "mlly@npm:1.2.0"
+  dependencies:
+    acorn: "npm:^8.8.2"
+    pathe: "npm:^1.1.0"
+    pkg-types: "npm:^1.0.2"
+    ufo: "npm:^1.1.1"
+  checksum: 4e0e4b9a1b25d0184d6e5af621a3b7e94f2339e5fcb3b478494b52eae0fba33a48a3f5ccd4d6238ed386e4d91eb79e4d8334a438bd6ddd9b65518f73de71fe88
   languageName: node
   linkType: hard
 
@@ -3354,7 +3366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-types@npm:^1.0.1":
+"pkg-types@npm:^1.0.1, pkg-types@npm:^1.0.2":
   version: 1.0.2
   resolution: "pkg-types@npm:1.0.2"
   dependencies:
@@ -4001,7 +4013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^1.1.0":
+"ufo@npm:^1.1.0, ufo@npm:^1.1.1":
   version: 1.1.1
   resolution: "ufo@npm:1.1.1"
   checksum: 46c7403f2ef32569a8de94e5c90a68233f448127c14f25a392aab8d7793662439498432fe88fd351c46b91c19186ce49f53c3c1327eec757f722927e0477d7b2
@@ -4070,19 +4082,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-node@npm:^0.29.8":
-  version: 0.29.8
-  resolution: "vite-node@npm:0.29.8"
+"vite-node@npm:^0.30.0":
+  version: 0.30.0
+  resolution: "vite-node@npm:0.30.0"
   dependencies:
     cac: "npm:^6.7.14"
     debug: "npm:^4.3.4"
-    mlly: "npm:^1.1.0"
+    mlly: "npm:^1.2.0"
     pathe: "npm:^1.1.0"
     picocolors: "npm:^1.0.0"
     vite: "npm:^3.0.0 || ^4.0.0"
   bin:
     vite-node: vite-node.mjs
-  checksum: d32e673edb511cbf61a3e555f25f7f4b6f750885fdc9f435cba0aad1a759212fd85c28689454ac2ea47b2cd16c60835809447d5d3d144aa6d97a6e0187d3f86b
+  checksum: 0aa95b8a1f656131f5d74db25d8dd93e63c2535b1778aec06ca3050a661eaebcefcd8b08dca52a45468f02dc0616e1eb4afd93e888b2bba7608f01a4b06ad2d2
   languageName: node
   linkType: hard
 
