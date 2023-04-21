@@ -913,7 +913,7 @@ __metadata:
     eslint: "npm:^8.37.0"
     prettier: "npm:^2.8.7"
     typescript: "npm:^5.0.3"
-    vite: "npm:^4.2.1"
+    vite: "npm:^4.3.1"
     vite-node: "npm:^0.29.8"
   languageName: unknown
   linkType: soft
@@ -3587,9 +3587,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^3.18.0":
-  version: 3.20.0
-  resolution: "rollup@npm:3.20.0"
+"rollup@npm:^3.20.2":
+  version: 3.20.7
+  resolution: "rollup@npm:3.20.7"
   dependencies:
     fsevents: "npm:~2.3.2"
   dependenciesMeta:
@@ -3597,7 +3597,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: d3b95bbd4d0d3a79318a68437a5d290cbada44412982089caa64803c7d1687e0b3221a40926f54e84507f57e2ff72d60057828e66c24afec6805d3114561620f
+  checksum: b49fc9d0af432b8cd577ef7054f2b80a3f4439f9fb069316502ac6640ac0c439b929818c76a0051bf4fcc6e0a6dd8b64713f4b9af85f5f0d3881c7f7323b1275
   languageName: node
   linkType: hard
 
@@ -4124,15 +4124,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "vite@npm:4.2.1"
+"vite@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "vite@npm:4.3.1"
   dependencies:
     esbuild: "npm:^0.17.5"
     fsevents: "npm:~2.3.2"
     postcss: "npm:^8.4.21"
-    resolve: "npm:^1.22.1"
-    rollup: "npm:^3.18.0"
+    rollup: "npm:^3.20.2"
   peerDependencies:
     "@types/node": ">= 14"
     less: "*"
@@ -4158,7 +4157,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 9b784639d35a074b12b72f60764ba6d6eedcaa112ac4b5df00a706e2d5a01d7d4b9ce19ddc5ce8b65260770e56e084fcf2ae7b7c763a0880a2d9f3bfb5fa3450
+  checksum: 0f1b0f873c2cb7a2467e7de9e783b48ef1eb0fbd985870645eecd3b405a01902a6292544f952016ff0f29051e275dece16cbb7d746bb0cb5dde33e9a0dbc63ee
   languageName: node
   linkType: hard
 
