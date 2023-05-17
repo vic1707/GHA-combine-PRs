@@ -640,10 +640,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.15.11":
-  version: 18.15.11
-  resolution: "@types/node@npm:18.15.11"
-  checksum: 2ad6c7aeb0841a821d5f0556ccbc9c0cec597cb31b5fe58b085740983f6b01a21a3c62c37ca642dd92b5de8935d6084896634af19f1f022e8d173049ad258a60
+"@types/node@npm:^20.1.7":
+  version: 20.1.7
+  resolution: "@types/node@npm:20.1.7"
+  checksum: 82a1481e8b6d92913a3ef9ee1a8c37d8b12c889eeff058fb2cf04f5249f61eb7d28557d18e3e9c24f2fc960359b5abe9bf9642b091fc7e990c5d7ded35eae033
   languageName: node
   linkType: hard
 
@@ -904,7 +904,7 @@ __metadata:
   dependencies:
     "@actions/core": "npm:^1.10.0"
     "@actions/github": "npm:^5.1.1"
-    "@types/node": "npm:^18.15.11"
+    "@types/node": "npm:^20.1.7"
     "@vercel/ncc": "npm:^0.36.1"
     "@vic1707/eslint-config": "npm:^4.0.4"
     "@vic1707/prettier": "npm:^1.1.1"
