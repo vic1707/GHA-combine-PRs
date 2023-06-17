@@ -1,6 +1,6 @@
 {
   "name": "GHA-combine-dependabot-PRs",
-  "packageManager": "yarn@4.0.0-rc.37",
+  "packageManager": "yarn@4.0.0-rc.45",
   "scripts": {
     "dev": "vite-node src/__dev.ts",
     "build": "ncc build src/index.ts -m -o dist && rm -rf dist/src dist/vite*",
@@ -28,7 +28,7 @@
     "vite": "^4.3.9"
   },
   "engines": {
-    "node": ">=19.2.0",
+    "node": ">=20.3.0",
     "npm": ">=9.2.0",
     "yarn": ">=4"
   },
