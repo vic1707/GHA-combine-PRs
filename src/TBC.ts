@@ -85,15 +85,12 @@ export const separateValidInvalidTBCs = (
         !cur.mergeable
           ? LOGGER.TBCIgnored(cur.pull_number, cur.title, 'NOT MERGEABLE')
           : LOGGER.TBCIgnored(cur.pull_number, cur.title, `STATUS: ${cur.mergeable_state.toUpperCase()}`);
-        acc[0] = {
-          ...acc[0],
-          [cur.pull_number]: {
-            mergeable: cur.mergeable,
-            mergeable_state: cur.mergeable_state,
-            sha: cur.sha,
-            status: 'invalid',
-            title: cur.title
-          }
+        acc[0][cur.pull_number] = {
+          mergeable: cur.mergeable,
+          mergeable_state: cur.mergeable_state,
+          sha: cur.sha,
+          status: 'invalid',
+          title: cur.title
         };
       } else acc[1].push(cur);
       return acc;

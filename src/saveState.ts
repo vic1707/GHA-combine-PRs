@@ -5,7 +5,8 @@ export const removeKnownState = (newState: SaveState, oldState: SaveState): Save
     const old = oldState[key];
     // the next line is not perfect and could false positive if the keys are not in the same order
     if (old && Object.entries(old).toString() === Object.entries(value).toString()) return acc;
-    return { ...acc, [key]: value };
+    acc[key] = value;
+    return acc;
   }, {});
 
 export const removeOutDatedNonBreakingChanges = (state: SaveState, TBCs: PRInfos[]): SaveState =>
