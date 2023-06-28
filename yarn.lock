@@ -975,7 +975,7 @@ __metadata:
     dotenv: "npm:^16.3.0"
     eslint: "npm:^8.43.0"
     prettier: "npm:^2.8.8"
-    typescript: "npm:^5.1.3"
+    typescript: "npm:^5.1.5"
     vite: "npm:^4.3.9"
     vite-node: "npm:^0.32.2"
   languageName: unknown
@@ -4075,23 +4075,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.1.3":
-  version: 5.1.3
-  resolution: "typescript@npm:5.1.3"
+"typescript@npm:^5.1.5":
+  version: 5.1.5
+  resolution: "typescript@npm:5.1.5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 34f5c10a175ad596eb9ef7b12a0417d830317859754bddde67d6681c8bd7e67a24c88dfab600bf0deeb7355cb0f58faf7ab2a2c34a5d3c96f8420928f0f69b58
+  checksum: e70bd67070584c1b24a3053ce6b67766da21f283d92635c0ea9181989f82f1c72bf1d857d6bf6f5996a063ec866f530613299c5474cb1045a8719176ea393f18
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.1.3#optional!builtin<compat/typescript>":
-  version: 5.1.3
-  resolution: "typescript@patch:typescript@npm%3A5.1.3#optional!builtin<compat/typescript>::version=5.1.3&hash=1f5320"
+"typescript@patch:typescript@npm%3A^5.1.5#optional!builtin<compat/typescript>":
+  version: 5.1.5
+  resolution: "typescript@patch:typescript@npm%3A5.1.5#optional!builtin<compat/typescript>::version=5.1.5&hash=5da071"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 24de93b5b464a551b43c62579107f859a1b612840b63ceb8965ed7eaf38519562e879bd2f5c6f0702c5331bbe31d1907dc0c5985dc9bddf7c3b3ea15756a6d78
+  checksum: a85fb6e4510e2dbd08c1c8c62ecf3b2d51ed19c1c3d018069f7eb32e6a0420630788c4155d322a0ec962f75f954e5b14a0d2d67b70c5fc00dcda5544acf821b4
   languageName: node
   linkType: hard
 
