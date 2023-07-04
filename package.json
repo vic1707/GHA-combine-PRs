@@ -16,7 +16,7 @@
     "@vic1707/eslint-config": "^4.0.5",
     "@vic1707/prettier": "^1.1.1",
     "@vic1707/tsconfig": "^3.0.0",
-    "dotenv": "^16.3.0",
+    "dotenv": "^16.3.1",
     "eslint": "^8.43.0",
     "prettier": "^2.8.8",
     "typescript": "^5.1.3",
