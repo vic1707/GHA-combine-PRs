@@ -1048,7 +1048,7 @@ __metadata:
     prettier: "npm:^3.0.0"
     typescript: "npm:^5.1.6"
     vite: "npm:^4.4.2"
-    vite-node: "npm:^0.33.0"
+    vite-node: "npm:^0.34.0"
   languageName: unknown
   linkType: soft
 
@@ -4273,9 +4273,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-node@npm:^0.33.0":
-  version: 0.33.0
-  resolution: "vite-node@npm:0.33.0"
+"vite-node@npm:^0.34.0":
+  version: 0.34.0
+  resolution: "vite-node@npm:0.34.0"
   dependencies:
     cac: "npm:^6.7.14"
     debug: "npm:^4.3.4"
@@ -4285,7 +4285,7 @@ __metadata:
     vite: "npm:^3.0.0 || ^4.0.0"
   bin:
     vite-node: vite-node.mjs
-  checksum: 7014f3a40c55e79129ae984a5a3a39b57de7526fc9363aff37837bf0fc4bb89a03cbb842a1cee73a9fbcb282da58b7f0ddf6107fb6df1756bac0f0fa1072370a
+  checksum: 06d9367a21ccfb49586ff1e7ff21d9f2af421bed9781431e89d4522df1d8f9366296d5295ba00616d1d01876fbba35163e9eebf9895205ce72eeda2e6c331b37
   languageName: node
   linkType: hard
 
