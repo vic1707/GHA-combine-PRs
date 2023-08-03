@@ -1045,7 +1045,7 @@ __metadata:
     "@vic1707/tsconfig": "npm:^4.0.0"
     dotenv: "npm:^16.3.1"
     eslint: "npm:^8.44.0"
-    prettier: "npm:^3.0.0"
+    prettier: "npm:^3.0.1"
     typescript: "npm:^5.1.6"
     vite: "npm:^4.4.2"
     vite-node: "npm:^0.33.0"
@@ -3605,12 +3605,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "prettier@npm:3.0.0"
+"prettier@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "prettier@npm:3.0.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 399292638280988ecd44db6532e908246b7c9468e6f5f571b3835a5206b7f1132cb674c12be430d921474901dc85398429dfd2dc31b282eef9affebd3ce72cef
+  checksum: bd20d7565d7701f3446cc149d767031da9239c32eea2aac558876353c781e0557291d885c0585af52500311425a326dd4248364eac41303d0454769a5ec2141a
   languageName: node
   linkType: hard
 
