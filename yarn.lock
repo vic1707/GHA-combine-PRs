@@ -1054,7 +1054,7 @@ __metadata:
     eslint: "npm:^8.46.0"
     prettier: "npm:^3.0.0"
     typescript: "npm:^5.1.6"
-    vite: "npm:^4.4.2"
+    vite: "npm:^4.4.8"
     vite-node: "npm:^0.33.0"
   languageName: unknown
   linkType: soft
@@ -3601,14 +3601,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.24":
-  version: 8.4.25
-  resolution: "postcss@npm:8.4.25"
+"postcss@npm:^8.4.26":
+  version: 8.4.27
+  resolution: "postcss@npm:8.4.27"
   dependencies:
     nanoid: "npm:^3.3.6"
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
-  checksum: 08916d50035c36e56024b7d56ed5c2a6d59420fce39e1fda77fcbda308cea6d7c39246adb46ee0649d28020e47a73ff2630a3439991ee82c539a495e6f6997d9
+  checksum: 57143e3c5ddaba9813ebd81de3e38e3ac198b0a1634e57752d29cd4936f1301eba38e43bda1302859679af047a6efc4366952d294c64358f8b90fbf49ba7d121
   languageName: node
   linkType: hard
 
@@ -4350,13 +4350,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.4.2":
-  version: 4.4.2
-  resolution: "vite@npm:4.4.2"
+"vite@npm:^4.4.8":
+  version: 4.4.8
+  resolution: "vite@npm:4.4.8"
   dependencies:
     esbuild: "npm:^0.18.10"
     fsevents: "npm:~2.3.2"
-    postcss: "npm:^8.4.24"
+    postcss: "npm:^8.4.26"
     rollup: "npm:^3.25.2"
   peerDependencies:
     "@types/node": ">= 14"
@@ -4386,7 +4386,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 75fbcec93700357c510dcc126d93f059c15887d8e5a32a81d1fc9d22aaebe6d25734050373803b0ebbe701cc0a1a9eba3d570b67a8aca22d2899ea61bdb622c6
+  checksum: 4d1319af9f02cb60f0e0a3db0f025ef42ae82da7587c999e8938c31b7ae960667215f18ad65b2cf20f85e9c8371ae50fae370232dc083e517aae571235e144be
   languageName: node
   linkType: hard
 
