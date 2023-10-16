@@ -11,7 +11,7 @@
     "upgrade-packages": "yarn upgrade-interactive"
   },
   "devDependencies": {
-    "@types/node": "^20.4.0",
+    "@types/node": "^20.8.6",
     "@vercel/ncc": "^0.36.1",
     "@vic1707/eslint-config": "^5.0.1",
     "@vic1707/prettier": "^1.1.1",
